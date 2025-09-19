@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive, sans-serif;
+  background-image: url("/bg-pixelroom.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  position: relative;
+  z-index: 0;
+}
+
+.app-container::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 240, 250, 0.35); /* más transparente */
+  backdrop-filter: blur(2px); /* más suave */
+  z-index: -1;
+  pointer-events: none;
+}
+
+.app-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Carpetas */
+.folder-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.folder {
+  background: linear-gradient(145deg, #ffb6e9, #ff85c1);
+  border: 3px solid #fff;
+  padding: 15px;
+  border-radius: 16px;
+  min-width: 200px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px #cc2e87;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.folder:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px #a62068;
+}
+
+.song {
+  margin-top: 10px;
+  padding: 8px;
+  background: #fff;
+  color: #ff4fa0;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.song:hover {
+  background: #ffe1f0;
+}
+
+/* Reproductor */
+.player-card {
+  background: linear-gradient(145deg, #ffb6e9, #ff85c1);
+  border: 3px solid #fff;
+  padding: 25px;
+  border-radius: 24px;
+  width: 340px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 6px #cc2e87;
+  position: relative;
+}
+
+/* Volver */
+.back-btn {
+  background: #fff;
+  border: 2px solid #ff4fa0;
+  color: #ff4fa0;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px #cc2e87;
+}
+
+.back-btn:hover {
+  background: #ff4fa0;
+  color: #fff;
+}
+
+/* Nombre canción */
+.track-display {
+  margin-bottom: 15px;
+  font-size: 14px;
+  background: #fff;
+  color: #ff4fa0;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Botones principales */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.control-btn {
+  background: #fff;
+  border: 2px solid #ff4fa0;
+  color: #ff4fa0;
+  font-size: 18px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 3px #cc2e87;
+}
+
+.control-btn:hover {
+  background: #ff4fa0;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Barra de progreso */
+.progress-bar {
+  background: #fff;
+  border-radius: 10px;
+  height: 10px;
+  width: 100%;
+  margin: 12px 0;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+  cursor: pointer; /* ahora se puede clickear */
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, #ff4fa0, #ffb6e9);
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* Velocidades */
+.speed-controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.speed-btn {
+  background: #fff;
+  border: 2px solid #ff4fa0;
+  color: #ff4fa0;
+  font-size: 10px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px #cc2e87;
+  transition: all 0.2s ease-in-out;
+}
+
+.speed-btn:hover {
+  background: #ff4fa0;
+  color: #fff;
+}
+
+.speed-btn.active {
+  background: #ff4fa0;
+  color: #fff;
+}
+
+.time-display {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
