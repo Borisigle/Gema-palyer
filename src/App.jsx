@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 const folders = {
   GOLDENS: ["MATRIX.mp3"],
   ADULT: ["WATER.mp3"],
+  BRATZ: ["BRATZ.mp3"]
 };
 
 function App() {

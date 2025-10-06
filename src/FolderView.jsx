@@ -2,6 +2,7 @@ export default function FolderView({ onSelectSong }) {
   const folders = {
     GOLDENS: [{ name: "MATRIX", src: "/GOLDENS/MATRIX.mp3" }],
     ADULT: [{ name: "WATER", src: "/ADULT/WATER.mp3" }],
+    BRATZ: [{ name: "BRATZ", src: "/BRATZ/BRATZ.mp3" }],
   };
 
   return (
